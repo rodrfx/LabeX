@@ -2,7 +2,9 @@ import React from 'react';
 import * as S from './styles';
 
 function TripDetailPage() {
-  return <div detalhes da viagem/>;
+  return (
+    <div>DETALHES VIAGENS</div>
+  )
 }
 
 export default TripDetailPage;
