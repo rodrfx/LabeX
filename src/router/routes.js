@@ -17,13 +17,13 @@ function Router() {
                 <Route path="/login">
                     <LoginPage />
                 </Route> 
-                <Route path="/viagem/listar">
+                <Route path="/viagens/listar">
                     <TripsListPage />
                 </Route>
-                <Route path="/viagem/criar">
+                <Route path="/viagens/criar">
                     <CreateTripPage />
                 </Route>
-                <Route path="/viagem/detalhes">
+                <Route path="/viagens/detalhes/:id">
                     <TripDetailPage />
                 </Route>
                 <Route path="/">

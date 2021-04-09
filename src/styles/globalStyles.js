@@ -8,7 +8,7 @@ const GlobalStyle = createGlobalStyle`
 }
 
 body{
-    background: var(--background)
+    background: var(--background);
     color: var(--text);
 }
 
