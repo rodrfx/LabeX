@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 import HomePage from '../pages/HomePage';
 import LoginPage from '../pages/LoginPage';
 import CreateTripPage from '../pages/CreateTripPage';
@@ -9,28 +9,26 @@ import ApplicationPage from '../pages/ApplicationPage';
 
 function Router() {
     return (
-        <BrowserRouter>
             <Switch>
-                <Route path="/inscricao">
+                <Route path="/inscricao/:id/:name">
                     <ApplicationPage />
                 </Route>
                 <Route path="/login">
                     <LoginPage />
                 </Route> 
-                <Route path="/viagens/listar">
+                <Route path="/viagens">
                     <TripsListPage />
                 </Route>
                 <Route path="/viagens/criar">
                     <CreateTripPage />
                 </Route>
-                <Route path="/viagens/detalhes/:id">
+                <Route path="/viagens/detalhes">
                     <TripDetailPage />
                 </Route>
                 <Route path="/">
                     <HomePage />
                 </Route>
             </Switch>
-        </BrowserRouter>
     );
 }
 

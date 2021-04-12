@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import Header from '../../components/Header';
 import Banner from '../../components/Banner';
 import * as S from './styles';
 import axios from 'axios';
@@ -19,12 +18,12 @@ function HomePage() {
             })
     }, []);
 
-    const goToTripDetailPage = (history, id) => {
-        history.push(`/viagens/detalhes/${id}`)
+    const goToApplicationPage = (history, id, name) => {
+        history.push(`/inscricao/${id}/${name}`)
     }
 
-    const onClickCard = (id) => {
-        goToTripDetailPage(history, id)
+    const onClickCard = (id, name) => {
+        goToApplicationPage(history, id, name)
     }
 
     const DataTrips = trips.map((trip) => {
@@ -35,14 +34,13 @@ function HomePage() {
                 date={trip.date}
                 description={trip.description}
                 durationInDays={trip.durationInDays}
-                onClick={() => onClickCard(trip.id) }
+                onClick={() => onClickCard(trip.id, trip.name) }
             />
         )
     })
 
     return (
         <>
-            <Header />
             <Banner />
             <S.SubTitle><strong>CONHEÇA NOSSOS PACOTES</strong></S.SubTitle>
             <S.Container>

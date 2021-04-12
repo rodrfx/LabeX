@@ -30,6 +30,14 @@ a{
     color: inherit;
     text-decoration: none;
 }
+
+input{
+    height: 32px;
+    margin: 15px 2px 0 2px;
+    padding: 12px 14px;
+    font-size: 17px;
+    border: red;
+}
 `;
 
 export default GlobalStyle;
