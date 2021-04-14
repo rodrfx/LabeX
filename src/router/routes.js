@@ -16,14 +16,14 @@ function Router() {
                 <Route path="/login">
                     <LoginPage />
                 </Route> 
-                <Route path="/viagens">
-                    <TripsListPage />
-                </Route>
                 <Route path="/viagens/criar">
                     <CreateTripPage />
                 </Route>
-                <Route path="/viagens/detalhes">
+                <Route path="/viagens/detalhes/:id">
                     <TripDetailPage />
+                </Route>
+                <Route path="/viagens">
+                    <TripsListPage />
                 </Route>
                 <Route path="/">
                     <HomePage />

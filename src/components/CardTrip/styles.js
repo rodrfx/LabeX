@@ -22,6 +22,6 @@ export const Info = styled.div`
      h3{
          color: #0264F9;
          font-size: 20px;
-         padding-bottom: 20px;
+         padding: 20px;
      }
 `;

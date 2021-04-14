@@ -3,7 +3,7 @@ import * as S from './styles';
 
 function CreateTripPage() {
   return (
-    <div>CRIAR VIAGENS</div>
+    <S.Container>CRIAR VIAGENS</S.Container>
   )
 }
 

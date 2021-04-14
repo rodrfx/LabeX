@@ -2,7 +2,7 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import { useForm } from '../../hooks/useForm';
 import * as S from './styles';
-import { applicationTrip } from '../../services/user'
+import { applicationTrip } from '../../services/trip'
 
 function ApplicationPage() {
   const params = useParams()

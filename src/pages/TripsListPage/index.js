@@ -1,16 +1,36 @@
 import React from 'react';
-import * as S from './styles';
 import { Link } from 'react-router-dom';
+import ListTrips from '../../components/ListTripItem';
+import { useTripsList } from '../../hooks/useTripsList';
+import * as S from './styles';
 
 function TripsListPage() {
-  return (
-    <div>
-      <h1>Lista de Viagens</h1>
-      <Link to={'/viagens/criar'}>
-        <button>Aplicar para viagem</button>
-      </Link>
+  const trips = useTripsList()
+  // console.log(trips)
 
-    </div>
+  return (
+    <S.Container>
+      <S.Content>
+      <Link to={'/viagens/criar'}>
+        <button>Cadastrar Viagem</button>
+      </Link>
+        <h1>Lista de viagens</h1>
+      <div>
+        {trips &&
+          trips.map((trip) => {
+            return (
+              <Link to={`/viagens/detalhes/${trip.id}`}>
+              <ListTrips
+                key={trip.id}
+                name={trip.name}
+              />
+              </Link>
+            )
+          })
+        }
+        </div>
+        </S.Content>
+    </S.Container>
   )
 }
 

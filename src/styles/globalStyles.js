@@ -13,9 +13,11 @@ body{
 }
 
 :root{
-	--white: #fff;
+    --header: #0764F9;
 	--background: #F2F3F5;
+	--white: #fff;
 	--text: #666666;
+    --color: ##0764F9;
 }
 
 body, input, textarea, button {
