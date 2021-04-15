@@ -1,15 +1,19 @@
 import React from 'react';
-import CandidatesItem from './CandidateItem';
+import CandidateItem from './CandidateItem';
 import { Card, Title } from './styles';
 
 function CandidatesList(props) {
-
   return (
-  <Card>
+    <Card>
       <Title>Lista de Candidatos</Title>
         {props.candidates.map(candidate => {
-            return <CandidatesItem candidates={candidate.name}/>
+          return <CandidateItem 
+          key={candidate.id}
+          candidates={candidate} 
+          decideCandidate={props.decideCandidate}
+          />
         })}
+
   </Card>
   )
 }

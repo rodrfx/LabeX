@@ -2,17 +2,20 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import { BASE_URL } from '../../constants/urls';
+import { user } from '../../constants/user';
 import TripInfoCard from './TripInfoCard';
 import CandidatesList from './CandidatesList';
-import * as S from './styles';
+import useProtectedPage from '../../hooks/useProtectPage';
+import useUnprotectedPage from '../../hooks/useUnprotectedPage';
 
 function TripDetailPage() {
   const [trip, setTrip] = useState()
   const params = useParams();
-  // console.log(params.id)
+  // useProtectedPage()
+  // useUnprotectedPage()
 
   const getTripDetail = () => {
-    axios.get(`${BASE_URL}/rodrigo-xavier-dumont/trip/${params.id}`, {
+    axios.get(`${BASE_URL}/${user}/trip/${params.id}`, {
       headers: { auth: window.localStorage.getItem('token') }
     })
       .then((res) => {
@@ -24,11 +27,28 @@ function TripDetailPage() {
     getTripDetail()
   }, []);
 
+  const decideCandidate = (approve, candidateId) => {
+    const body = {
+        approve: approve
+    }
+    axios.put(`${BASE_URL}/${user}/trips/${params.id}/candidates/${candidateId}/decide`, body, {
+        headers: {
+            auth: window.localStorage.getItem('token')
+        }
+    })
+    .then(()=>{
+      getTripDetail()
+    })
+}
+
   return (
     <>
       {trip && <>
         <TripInfoCard info={trip} />
-        <CandidatesList candidates={trip.candidates} />
+        <CandidatesList 
+        candidates={trip.candidates} 
+        decideCandidate={decideCandidate}
+        />
         </>
       }
     </>

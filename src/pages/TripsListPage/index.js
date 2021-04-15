@@ -2,10 +2,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import ListTrips from '../../components/ListTripItem';
 import { useTripsList } from '../../hooks/useTripsList';
+import useProtectedPage from '../../hooks/useProtectPage';
 import * as S from './styles';
 
 function TripsListPage() {
   const trips = useTripsList()
+  // useProtectedPage()
   // console.log(trips)
 
   return (

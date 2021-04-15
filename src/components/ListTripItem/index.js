@@ -2,7 +2,7 @@ import React from 'react';
 import Detail from '../../assets/iconDetail.svg'
 import * as S from './styles';
 
-function ListTrips(props) {
+function ListTripItem(props) {
   return (
       <S.Content onClick= {props.onClick}>
       <img src={Detail} alt={'ícone de detalhe'}/>
@@ -11,4 +11,4 @@ function ListTrips(props) {
   )
 }
 
-export default ListTrips;
+export default ListTripItem;

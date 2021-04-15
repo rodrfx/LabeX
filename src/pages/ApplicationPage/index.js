@@ -1,10 +1,11 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useHistory } from 'react-router-dom';
 import { useForm } from '../../hooks/useForm';
 import * as S from './styles';
 import { applicationTrip } from '../../services/trip'
 
 function ApplicationPage() {
+  const history = useHistory()
   const params = useParams()
   const { form, onChange, resetForm } = useForm({ name: "", age: "", applicationText: "", profession: "", country: "" })
 
@@ -16,7 +17,7 @@ function ApplicationPage() {
   const handleSubmission = (event) => {
     event.preventDefault()
     // console.log(form)
-    applicationTrip(form, params, resetForm)
+    applicationTrip(form, params, resetForm, history)
   }
   
   return (

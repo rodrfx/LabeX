@@ -15,7 +15,6 @@ function LoginPage() {
 
   const handleSubmission = (event) => {
     event.preventDefault()
-    console.log(form)
     login(form, resetForm, history)
   }
 
