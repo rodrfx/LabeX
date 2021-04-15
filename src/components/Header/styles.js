@@ -21,6 +21,9 @@ export const Content = styled.div`
   p{
     color: black;
     margin-right: 50px;
+    cursor: pointer;
+    padding: 6px;
+    border: 1px solid black;
   }
 
 `;

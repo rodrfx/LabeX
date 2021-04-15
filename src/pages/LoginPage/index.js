@@ -5,7 +5,7 @@ import { useHistory } from 'react-router-dom';
 import * as S from './styles';
 import useUnprotectedPage from '../../hooks/useUnprotectedPage';
 
-function LoginPage() {
+function LoginPage({setButtonLogin}) {
   const { form, onChange, resetForm } = useForm({ email: "", password: "" })
   const history = useHistory()
   useUnprotectedPage()
@@ -17,7 +17,7 @@ function LoginPage() {
 
   const handleSubmission = (event) => {
     event.preventDefault()
-    login(form, resetForm, history)
+    login(form, resetForm, history, setButtonLogin)
   }
 
   return (

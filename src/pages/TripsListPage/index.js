@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import ListTrips from '../../components/ListTripItem';
 import { useTripsList } from '../../hooks/useTripsList';
-import useProtectedPage from '../../hooks/useProtectPage';
+import useProtectedPage from '../../hooks/useProtectedPage';
 import * as S from './styles';
 
 function TripsListPage() {

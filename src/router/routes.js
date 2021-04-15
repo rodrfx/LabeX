@@ -7,14 +7,14 @@ import TripsListPage from '../pages/TripsListPage';
 import TripDetailPage from '../pages/TripDetailPage';
 import ApplicationPage from '../pages/ApplicationPage';
 
-function Router() {
+function Router({setButtonLogin}) {
     return (
             <Switch>
                 <Route path="/inscricao/:id/:name">
                     <ApplicationPage />
                 </Route>
                 <Route path="/login">
-                    <LoginPage />
+                    <LoginPage setButtonLogin={setButtonLogin}/>
                 </Route> 
                 <Route path="/viagens/criar">
                     <CreateTripPage />

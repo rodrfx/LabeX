@@ -2,7 +2,7 @@ import React from 'react';
 import { useForm } from '../../hooks/useForm';
 import { useHistory } from 'react-router-dom';
 import { createTrip } from '../../services/trip';
-import useProtectedPage from '../../hooks/useProtectPage';
+import useProtectedPage from '../../hooks/useProtectedPage';
 import * as S from './styles';
 
 function CreateTripPage() {

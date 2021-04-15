@@ -5,7 +5,7 @@ import { BASE_URL } from '../../constants/urls';
 import { user } from '../../constants/user';
 import TripInfoCard from './TripInfoCard';
 import CandidatesList from './CandidatesList';
-import useProtectedPage from '../../hooks/useProtectPage';
+import useProtectedPage from '../../hooks/useProtectedPage';
 
 function TripDetailPage() {
   const [trip, setTrip] = useState()
