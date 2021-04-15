@@ -26,7 +26,7 @@ function CreateTripPage() {
       date: formattedDate,
       description: form.description,
       durationInDays: form.durationInDays
-    } 
+    }
 
     createTrip(body, resetForm, history)
 

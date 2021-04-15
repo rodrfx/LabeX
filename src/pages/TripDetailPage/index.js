@@ -6,13 +6,11 @@ import { user } from '../../constants/user';
 import TripInfoCard from './TripInfoCard';
 import CandidatesList from './CandidatesList';
 import useProtectedPage from '../../hooks/useProtectPage';
-import useUnprotectedPage from '../../hooks/useUnprotectedPage';
 
 function TripDetailPage() {
   const [trip, setTrip] = useState()
   const params = useParams();
-  // useProtectedPage()
-  // useUnprotectedPage()
+  useProtectedPage()
 
   const getTripDetail = () => {
     axios.get(`${BASE_URL}/${user}/trip/${params.id}`, {
@@ -29,27 +27,27 @@ function TripDetailPage() {
 
   const decideCandidate = (approve, candidateId) => {
     const body = {
-        approve: approve
+      approve: approve
     }
     axios.put(`${BASE_URL}/${user}/trips/${params.id}/candidates/${candidateId}/decide`, body, {
-        headers: {
-            auth: window.localStorage.getItem('token')
-        }
+      headers: {
+        auth: window.localStorage.getItem('token')
+      }
     })
-    .then(()=>{
-      getTripDetail()
-    })
-}
+      .then(() => {
+        getTripDetail()
+      })
+  }
 
   return (
     <>
       {trip && <>
         <TripInfoCard info={trip} />
-        <CandidatesList 
-        candidates={trip.candidates} 
-        decideCandidate={decideCandidate}
+        <CandidatesList
+          candidates={trip.candidates}
+          decideCandidate={decideCandidate}
         />
-        </>
+      </>
       }
     </>
   )

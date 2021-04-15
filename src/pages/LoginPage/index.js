@@ -3,10 +3,12 @@ import { useForm } from '../../hooks/useForm'
 import { login } from '../../services/user';
 import { useHistory } from 'react-router-dom';
 import * as S from './styles';
+import useUnprotectedPage from '../../hooks/useUnprotectedPage';
 
 function LoginPage() {
   const { form, onChange, resetForm } = useForm({ email: "", password: "" })
   const history = useHistory()
+  useUnprotectedPage()
 
   const handleInputChange = (event) => {
     const { value, name } = event.target

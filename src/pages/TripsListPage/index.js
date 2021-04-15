@@ -7,8 +7,7 @@ import * as S from './styles';
 
 function TripsListPage() {
   const trips = useTripsList()
-  // useProtectedPage()
-  // console.log(trips)
+  useProtectedPage()
 
   return (
     <S.Container>
