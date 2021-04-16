@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Logo from '../../assets/labex.svg'
+import Logo from '../../assets/labexW.svg'
 import { useHistory } from 'react-router-dom';
 import * as S from './styles';
 

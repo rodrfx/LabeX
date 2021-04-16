@@ -13,6 +13,7 @@ text-align: center;
 h1{
     font-size: 2rem;
     padding-bottom: 20px;
+    color: var(--title);
 }
 `;
 
@@ -26,8 +27,9 @@ export const FormContainer = styled.form`
         margin: 30px 0;
         font-size: 16px;
         border-radius: 5px;
-        &:hover{
-                 background-color: #5e5e5d;
+        font-weight: bold;
+        :hover{
+                 background-color: var(--hoverButton);
                  color: white;
             };
     };

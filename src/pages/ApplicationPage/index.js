@@ -70,7 +70,7 @@ function ApplicationPage() {
             required
           />
           <button>
-            ENTRAR
+            CADASTRAR
         </button>
         </S.FormContainer>
       </S.Container>

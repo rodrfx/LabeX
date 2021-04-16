@@ -19,11 +19,11 @@ export const Content = styled.div`
     margin-left: 50px;
   };
   p{
-    color: black;
+    color: #fff;
+    border: 1px solid #fff;
     margin-right: 50px;
-    cursor: pointer;
     padding: 6px;
-    border: 1px solid black;
+    cursor: pointer;
   }
 
 `;

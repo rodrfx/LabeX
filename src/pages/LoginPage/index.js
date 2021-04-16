@@ -4,7 +4,6 @@ import { login } from '../../services/user';
 import { useHistory } from 'react-router-dom';
 import * as S from './styles';
 import useUnprotectedPage from '../../hooks/useUnprotectedPage';
-import Loading from '../../components/Loading';
 import LoadingButton from '../../components/LoadingButton';
 
 function LoginPage({setButtonLogin}) {

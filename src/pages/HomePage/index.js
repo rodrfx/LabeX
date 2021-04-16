@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import { useTripsList } from '../../hooks/useTripsList';
 import Loading from '../../components/Loading';
 import * as S from './styles';
+import Footer from '../../components/Footer';
 
 function HomePage() {
     const trips = useTripsList()
@@ -25,13 +26,14 @@ function HomePage() {
 
     return (
         <>
-            <Banner />
+            <Banner/>
             <S.SubTitle><strong>CONHEÇA NOSSOS PACOTES</strong></S.SubTitle>
             <S.Container>
                 <S.Card>
                     {dataTrips.length > 0 ? dataTrips : <Loading />}
                 </S.Card>
             </S.Container>
+            <Footer/>
         </>
     )
 }

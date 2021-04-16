@@ -11,6 +11,7 @@ export const Container = styled.div`
 export const Title = styled.div`
 text-align: center;
 h1{
+    color: var(--title);
     font-size: 2rem;
     padding-bottom: 20px;
 }
@@ -31,8 +32,9 @@ export const FormContainer = styled.form`
     button{
         height: 32px;
         margin-top: 20px;
-        &:hover{
-                 background-color: #5e5e5d;
+        font-weight: bold;
+        :hover{
+                 background-color: var(--hoverButton);
                  color: white;
             };
     };

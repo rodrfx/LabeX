@@ -13,11 +13,12 @@ body{
 }
 
 :root{
-    --header: #1a2b63;
+    --header: #262626;
 	--background: #F2F3F5;
 	--white: #fff;
 	--text: #666666;
-    --color: ##0764F9;
+    --hoverButton: #4d4d4d;
+    --title: #595959;
 }
 
 body, input, textarea, button {

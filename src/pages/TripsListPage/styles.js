@@ -25,4 +25,8 @@ export const Button = styled.button`
   margin: 30px 0;
   font-size: 18px;
   border-radius: 5px;
+  :hover{
+    color: #fff;
+    background-color:var(--hoverButton)
+  }
 `;
