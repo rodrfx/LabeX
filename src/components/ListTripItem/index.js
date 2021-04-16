@@ -4,7 +4,7 @@ import * as S from './styles';
 
 function ListTripItem(props) {
   return (
-      <S.Content onClick= {props.onClick}>
+      <S.Content>
       <img src={Detail} alt={'ícone de detalhe'}/>
       <p>{props.name}</p>
       </S.Content>

@@ -19,10 +19,13 @@ h1{
 export const FormContainer = styled.form`
     display: flex;
     flex-direction: column;
-    width: 35%;
+    width: 30%;
     button{
-        height: 32px;
-        margin-top: 20px;
+        background-color: inherit;
+        padding: 5px 10px;
+        margin: 30px 0;
+        font-size: 16px;
+        border-radius: 5px;
         &:hover{
                  background-color: #5e5e5d;
                  color: white;

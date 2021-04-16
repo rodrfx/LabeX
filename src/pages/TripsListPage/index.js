@@ -3,34 +3,35 @@ import { Link } from 'react-router-dom';
 import ListTrips from '../../components/ListTripItem';
 import { useTripsList } from '../../hooks/useTripsList';
 import useProtectedPage from '../../hooks/useProtectedPage';
+import Loading from '../../components/Loading'
 import * as S from './styles';
 
 function TripsListPage() {
   const trips = useTripsList()
   useProtectedPage()
 
+  const tripData = trips.map((trip) => {
+    return (
+      <Link to={`/viagens/detalhes/${trip.id}`}>
+          <ListTrips
+            key={trip.id}
+            name={trip.name}
+          />
+      </Link>
+    )
+  })
+
   return (
     <S.Container>
       <S.Content>
-      <Link to={'/viagens/criar'}>
-        <button>Cadastrar Viagem</button>
-      </Link>
+        <S.Itens>
+        <Link to={'/viagens/criar'}>
+          <S.Button>Cadastrar nova viagem</S.Button>
+        </Link>
         <h1>Lista de viagens</h1>
-      <div>
-        {trips &&
-          trips.map((trip) => {
-            return (
-              <Link to={`/viagens/detalhes/${trip.id}`}>
-              <ListTrips
-                key={trip.id}
-                name={trip.name}
-              />
-              </Link>
-            )
-          })
-        }
-        </div>
-        </S.Content>
+        {tripData.length > 1 ? tripData : <Loading />}
+        </S.Itens>
+      </S.Content>
     </S.Container>
   )
 }

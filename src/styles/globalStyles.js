@@ -13,7 +13,7 @@ body{
 }
 
 :root{
-    --header: #0764F9;
+    --header: #1a2b63;
 	--background: #F2F3F5;
 	--white: #fff;
 	--text: #666666;
@@ -38,7 +38,7 @@ input{
     margin: 15px 2px 0 2px;
     padding: 12px 14px;
     font-size: 17px;
-    border: red;
+    border-radius: 5px;
 }
 `;
 

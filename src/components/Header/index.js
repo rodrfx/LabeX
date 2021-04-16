@@ -7,9 +7,7 @@ import * as S from './styles';
 function Header({buttonLogin, setButtonLogin}) {
 const history = useHistory()
 const token = window.localStorage.getItem('token')
-const logout = () => {
-  window.localStorage.removeItem('token')
-}
+const logout = () => {window.localStorage.removeItem('token')}
 
 const ActionbuttonLogin = () => {
   if(token){
@@ -21,16 +19,13 @@ const ActionbuttonLogin = () => {
   }
 }
 
-
   return (
       <S.Container>
         <S.Content>
           <Link to={'/'}>
           <img src={Logo} alt={"logomarca"} />
           </Link>
-
           <p onClick={ActionbuttonLogin}>{buttonLogin}</p>
-
         </S.Content>
       </S.Container>
   )

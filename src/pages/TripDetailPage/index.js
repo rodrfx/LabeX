@@ -6,6 +6,7 @@ import { user } from '../../constants/user';
 import TripInfoCard from './TripInfoCard';
 import CandidatesList from './CandidatesList';
 import useProtectedPage from '../../hooks/useProtectedPage';
+import Loading from '../../components/Loading';
 
 function TripDetailPage() {
   const [trip, setTrip] = useState()
@@ -41,13 +42,15 @@ function TripDetailPage() {
 
   return (
     <>
-      {trip && <>
+      {trip ? <>
         <TripInfoCard info={trip} />
         <CandidatesList
           candidates={trip.candidates}
           decideCandidate={decideCandidate}
         />
       </>
+      :
+        <Loading />
       }
     </>
   )
