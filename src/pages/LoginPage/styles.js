@@ -13,18 +13,23 @@ text-align: center;
 h1{
     font-size: 2rem;
     padding-bottom: 20px;
+    color: var(--title);
 }
 `;
 
 export const FormContainer = styled.form`
     display: flex;
     flex-direction: column;
-    width: 35%;
+    width: 30%;
     button{
-        height: 32px;
-        margin-top: 20px;
-        &:hover{
-                 background-color: #5e5e5d;
+        background-color: inherit;
+        padding: 5px 10px;
+        margin: 30px 0;
+        font-size: 16px;
+        border-radius: 5px;
+        font-weight: bold;
+        :hover{
+                 background-color: var(--hoverButton);
                  color: white;
             };
     };

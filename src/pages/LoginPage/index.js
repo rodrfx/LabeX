@@ -1,12 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useForm } from '../../hooks/useForm'
 import { login } from '../../services/user';
 import { useHistory } from 'react-router-dom';
 import * as S from './styles';
+import useUnprotectedPage from '../../hooks/useUnprotectedPage';
+import LoadingButton from '../../components/LoadingButton';
 
-function LoginPage() {
+function LoginPage({setButtonLogin}) {
   const { form, onChange, resetForm } = useForm({ email: "", password: "" })
   const history = useHistory()
+  const[isLoading, setIsLoading] = useState(false)
+  
+  useUnprotectedPage()
 
   const handleInputChange = (event) => {
     const { value, name } = event.target
@@ -15,8 +20,7 @@ function LoginPage() {
 
   const handleSubmission = (event) => {
     event.preventDefault()
-    console.log(form)
-    login(form, resetForm, history)
+    login(form, resetForm, history, setButtonLogin, setIsLoading)
   }
 
   return (
@@ -43,7 +47,7 @@ function LoginPage() {
             required
           />
           <button>
-            ENTRAR
+          {isLoading ? <LoadingButton/> : <> ENTRAR </>}
         </button>
         </S.FormContainer>
       </S.Container>

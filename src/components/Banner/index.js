@@ -5,7 +5,7 @@ import * as S from './styles';
 function Banner() {
   return (
       <S.Container>
-          banner
+        <S.Title>Encontre as melhores viagens espaciais!</S.Title>
       </S.Container>
   )
 }

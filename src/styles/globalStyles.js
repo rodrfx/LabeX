@@ -13,9 +13,12 @@ body{
 }
 
 :root{
-	--white: #fff;
+    --header: #262626;
 	--background: #F2F3F5;
+	--white: #fff;
 	--text: #666666;
+    --hoverButton: #4d4d4d;
+    --title: #595959;
 }
 
 body, input, textarea, button {
@@ -36,7 +39,7 @@ input{
     margin: 15px 2px 0 2px;
     padding: 12px 14px;
     font-size: 17px;
-    border: red;
+    border-radius: 5px;
 }
 `;
 

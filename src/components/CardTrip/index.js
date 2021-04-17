@@ -3,7 +3,7 @@ import * as S from './styles';
 
 function CardTripHomePage(props) {
     return (
-        <S.Container onClick={props.onClick}>
+        <S.Container>
             <S.Info>
                 <h3><b>{props.name}</b></h3>
                 <p><b>Data:</b> {props.date}</p>
