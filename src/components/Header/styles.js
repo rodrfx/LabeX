@@ -38,4 +38,7 @@ export const Button = styled.button`
     :hover{
       padding: 11px 10px;
     }
+    @media(max-width: 800px) {
+      font-size: 1rem;
+}
 `;
