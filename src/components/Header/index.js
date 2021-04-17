@@ -6,6 +6,7 @@ import * as S from './styles';
 
 function Header({buttonLogin, setButtonLogin}) {
 const history = useHistory()
+
 const token = window.localStorage.getItem('token')
 const logout = () => {window.localStorage.removeItem('token')}
 
@@ -25,7 +26,14 @@ const ActionbuttonLogin = () => {
           <Link to={'/'}>
           <img src={Logo} alt={"logomarca"} />
           </Link>
-          <p onClick={ActionbuttonLogin}>{buttonLogin}</p>
+          <S.DisplatButton>
+            {token && 
+            <Link to={'/viagens'}>
+            <S.Button>Área Restrita</S.Button>
+            </Link>
+            }
+          <S.Button onClick={ActionbuttonLogin} primary>{buttonLogin}</S.Button>
+          </S.DisplatButton>
         </S.Content>
       </S.Container>
   )
