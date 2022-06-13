@@ -1,7 +1,7 @@
 <h1 align="center">LabeX (Front-end)</h1>
 
 ## 💻 Sobre o Projeto
-<p>Projeto criado durante o curso realizado na Labenu, encontre as melhores viagens intergaláticas, aperte o cinto e vamos nessa!</p>
+<p>Projeto criado durante o curso realizado na Labenu, encontre as melhores viagens intergalácticas, aperte o cinto e vamos nessa!</p>
 
  ## Links
  * 🔗 [Acessar a demonstração](http://noiseless-daughter.surge.sh)
